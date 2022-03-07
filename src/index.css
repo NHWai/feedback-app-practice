@@ -1,13 +1,209 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --bg-color: rgb(0, 0, 58);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(0, 0, 58);
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h3 {
+  letter-spacing: 1.6px;
+  font-weight: 600;
+}
+
+.container {
+  /* padding: 20px 50px 0; */
+  margin: 20px auto;
+  max-width: 600px;
+  color: #fff;
+  padding: 20px;
+}
+
+.card {
+  min-height: 100px;
+  padding: 10px 40px;
+
+  margin-bottom: 10px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Need when conditional class is used */
+/* .card.reverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+} */
+
+.card .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-120%, 40%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card .edit {
+  position: absolute;
+  top: 6px;
+  right: 30px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.text-display {
+  font-size: 16px;
+}
+
+.num-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-30%, -30%);
+  background-color: palevioletred;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.feedbackStats {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #202142;
+}
+
+.btn-secondary {
+  background-color: #ff6a95;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.btn[disabled] {
+  background-color: rgb(165, 162, 162);
+}
+
+.btn[disabled]:hover {
+  transform: none;
+  opacity: 1;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.input-group input {
+  border: none;
+  width: 70%;
+  outline: none;
+}
+
+.input-group input:hover,
+.input-group input:active {
+  outline: none;
+  border: 0;
+}
+
+.message {
+  margin: 5px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.rating {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 50%;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.rating input[type="radio"]:active + label {
+  background-color: #ff6a95;
+  border: none;
+}
+
+.rating input[type="radio"]:checked + label {
+  background-color: #ff6a95;
+  border: none;
+}
+
+.abt-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.abt-icon a {
+  color: #f5f5f5;
+}
+
+.active {
+  background-color: #000;
+  color: #008000;
 }
